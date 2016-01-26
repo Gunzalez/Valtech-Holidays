@@ -1,0 +1,2 @@
+Convert icons to font icons, so clearer on high resolutions screens
+Add in a favicon
