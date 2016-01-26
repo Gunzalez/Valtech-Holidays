@@ -3,8 +3,28 @@
   src: url("fonts/Rockwell/Rockwell.eot?") format("eot"), url("fonts/Rockwell/Rockwell.woff") format("woff"), url("fonts/Rockwell/Rockwell.ttf") format("truetype"), url("fonts/Rockwell/Rockwell.svg#Rockwell") format("svg");
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Rockwell;
+  margin: 0;
+  padding: 0 0 8px 0;
+}
+
+p {
+  margin: 0;
+  padding: 0 0 8px 0;
+  line-height: 120%;
+  font-size: 0.9em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
 .section {
   margin: 0 20px;
+  content: "";
+  clear: both;
+  display: block;
 }
 @media (min-width: 960px) {
   .section {
@@ -21,42 +41,85 @@
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  padding: 2px 10px;
+  padding: 2px 8px;
   font-family: Rockwell;
+  color: #0175b9;
+}
+
+.header {
+  height: 90px;
+}
+
+.main-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-top: 40px;
+}
+.main-navigation li {
+  float: left;
+  padding-right: 10px;
+}
+.main-navigation .btn {
+  color: #ffffff;
+  width: 120px;
+  text-align: left;
+  font-size: 1.1em;
+  padding: 5px;
+}
+.main-navigation .btn i {
+  margin: 0 2px;
+}
+.main-navigation .btn.blue {
+  background-color: #0a80c7;
+}
+.main-navigation .btn.green {
+  background-color: #00ac51;
+}
+.main-navigation .btn.lime {
+  background-color: #bcd631;
+}
+.main-navigation .btn.pink {
+  background-color: #ee4a9a;
 }
 
 .article {
-  float: left;
-  margin-right: 2.18%;
-  margin-bottom: 2.18%;
+  margin-bottom: 1.5%;
 }
-.article > img {
-  margin-bottom: 2.18%;
+.article .copy {
+  padding: 12px;
 }
-@media (max-width: 480px) {
-  .article {
-    width: 100%;
+@media (max-width: 960px) {
+  .article img {
+    float: left;
   }
-  .article:nth-child(2n) {
-    margin-right: 0;
-  }
-}
-@media (min-width: 480px) and (max-width: 960px) {
-  .article {
-    width: 47.82%;
-  }
-  .article:nth-child(2n) {
-    margin-right: 0;
+  .article .copy {
+    margin-left: 220px;
+    min-height: 101px;
   }
 }
 @media (min-width: 960px) {
   .article {
+    float: left;
+    margin-right: 2.18%;
     width: 23.365%;
   }
   .article:nth-child(4n) {
     margin-right: 0;
   }
+  .article .copy {
+    height: 150px;
+    position: relative;
+  }
+  .article .copy .cta {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+  }
 }
 .article .border {
   border: 1px solid #cccccc;
+  content: "";
+  clear: both;
+  display: block;
 }
