@@ -20,11 +20,21 @@ h3 {
   font-size: 1.3em;
 }
 
+body {
+  background-color: #333333;
+}
+
+.strip.white {
+  background-color: #ffffff;
+}
+
 .section {
+  position: relative;
   margin: 0 20px;
   content: "";
   clear: both;
   display: block;
+  overflow: auto;
 }
 @media (min-width: 960px) {
   .section {
@@ -54,7 +64,9 @@ h3 {
   margin: 0;
   padding: 0;
   list-style: none;
-  padding-top: 40px;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
 }
 .main-navigation li {
   float: left;
@@ -83,6 +95,86 @@ h3 {
   background-color: #ee4a9a;
 }
 
+.carousel {
+  overflow: hidden;
+}
+.carousel #slider {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.carousel #slider.animated {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.carousel #slider .slide {
+  height: 360px;
+  width: 100%;
+  float: left;
+}
+.carousel #slider .slide-0 {
+  background: url("../images/img-slide-0.png") top center no-repeat;
+}
+.carousel #slider .slide-1 {
+  background: url("../images/img-slide-1.png") top center no-repeat;
+}
+.carousel #slider .slide-2 {
+  background: url("../images/img-slide-2.png") top center no-repeat;
+}
+.carousel .control {
+  position: absolute;
+  top: 50%;
+  margin-top: 5px;
+  background: white;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+.carousel .control a {
+  width: 66px;
+  height: 66px;
+  display: block;
+  font-size: 2.20em;
+  line-height: 60px;
+  color: #0a80c7;
+}
+.carousel .dots {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+  text-align: center;
+}
+.carousel .dots ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+}
+.carousel .dots ul li {
+  display: inline-block;
+  padding: 0 5px;
+}
+.carousel .dots ul li span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.carousel .dots ul li.active span {
+  background-color: #0a80c7;
+  border: 1px solid #ffffff;
+}
+
 .article {
   margin-bottom: 1.5%;
 }
@@ -107,6 +199,9 @@ h3 {
   .article:nth-child(4n) {
     margin-right: 0;
   }
+  .article img {
+    width: 100%;
+  }
   .article .copy {
     height: 150px;
     position: relative;
@@ -122,4 +217,5 @@ h3 {
   content: "";
   clear: both;
   display: block;
+  overflow: auto;
 }

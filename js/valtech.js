@@ -37,6 +37,7 @@
         },
 
         resize: function () {
+            valtech.carousel.resize();
 
         },
 
@@ -57,6 +58,80 @@
         }
     };
 
+    valtech.carousel = {
+        $html: $('.carousel'),
+        $slider: $('#slider', this.$html),
+        $controls: $('.slide-btn', this.$html),
+        slidesCount: $('.slide', this.$slider).length,
+        $dots: $('.dots', this.$html),
+        $slidePos: 0,
+
+        updateDots: function(){
+            $('.dot', this.$dots).eq(this.$slidePos).addClass('active').siblings().removeClass('active');
+        },
+
+        slide: function(direction){
+            var oldLeftMargin = parseInt(this.$slider.css('margin-left').replace('px','')),
+                newLeftMargin;
+
+            this.$slider.addClass('animated');
+            if(direction == 'right'){
+                newLeftMargin = oldLeftMargin - $(window).width();
+                this.$slidePos++;
+            } else {
+                newLeftMargin = oldLeftMargin + $(window).width();
+                this.$slidePos--;
+            }
+            this.updateDots();
+            this.$slider.css('margin-left', newLeftMargin);
+        },
+
+        init: function(){
+            var carousel = this;
+
+            this.$controls.on('click', function(evt){
+                evt.preventDefault();
+
+                if($(this).hasClass('slide-right')){
+                    if(carousel.$slidePos < (carousel.slidesCount-1)){
+                        carousel.slide('right');
+                    }
+                } else {
+                    if(carousel.$slidePos > 0){
+                        carousel.slide('left');
+                    }
+                }
+            });
+            this.resize();
+        },
+
+        resize: function(){
+            this.$slider.removeClass('animated');
+            this.$slider.width($(window).width() * this.slidesCount).removeClass('hidden');
+            $('.slide', this.$slider).width($(window).width());
+            $('li', this.$dots).eq(this.$slidePos).addClass('active');
+
+            var newLeftMargin;
+            if(this.$slidePos != 0 ){
+                newLeftMargin = '-' + (this.$html.width() * parseInt(this.$slidePos)) + 'px';
+            } else {
+                newLeftMargin = '0px';
+            }
+            this.$slider.css('margin-left', newLeftMargin);
+
+            // positioning controls
+            if ($(window).width() < 916 ){
+                $('.left-control').css('left', 0);
+                $('.right-control').css('right', 0);
+            } else {
+                $('.left-control').css('left', ($(window).width() - 916)/2);
+                $('.right-control').css('right', ($(window).width() - 916)/2);
+            }
+
+
+
+        }
+    };
 
     valtech.mobileNav = {
 
@@ -82,6 +157,7 @@
         // all init
         valtech.environment.init();
         valtech.mobileNav.init();
+        valtech.carousel.init();
 
         // resize triggers
         $(window).on('resize', function () {
