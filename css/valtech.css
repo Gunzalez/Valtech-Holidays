@@ -40,31 +40,6 @@ body {
   background-color: #333333;
 }
 
-.strip.white {
-  background-color: #ffffff;
-}
-.strip.blue {
-  background-color: #00a3e6;
-}
-.strip.padded {
-  padding: 30px 0;
-}
-
-.section {
-  position: relative;
-  margin: 0 20px;
-  content: "";
-  clear: both;
-  display: block;
-  overflow: auto;
-}
-@media (min-width: 960px) {
-  .section {
-    margin: 0 auto;
-    width: 916px;
-  }
-}
-
 .btn {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -82,8 +57,49 @@ body {
   border: 1px solid #eaeaea;
 }
 
-input {
-  outline: none;
+.form-control {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px 7px;
+  font-size: 0.8em;
+  height: auto;
+  border: none;
+}
+.form-control:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.strip.white {
+  background-color: #ffffff;
+}
+.strip.blue {
+  background-color: #00a3e6;
+}
+.strip.padded {
+  padding: 15px 0;
+}
+@media (min-width: 960px) {
+  .strip.padded {
+    padding: 30px 0;
+  }
+}
+
+.section {
+  position: relative;
+  margin: 0 20px;
+  content: "";
+  clear: both;
+  display: block;
+  overflow: auto;
+}
+@media (min-width: 960px) {
+  .section {
+    margin: 0 auto;
+    width: 916px;
+  }
 }
 
 .header {
@@ -195,6 +211,7 @@ input {
 }
 .aux-navigation .aux-links a:hover {
   color: #000000;
+  text-decoration: underline;
 }
 @media (max-width: 768px) {
   .aux-navigation {
@@ -336,15 +353,15 @@ input {
   overflow: auto;
   padding: 10px 0 15px 0;
 }
-.holiday-search .bottom-row .input-group {
+.holiday-search .bottom-row .grouped-inputs {
   float: left;
   padding-right: 15px;
 }
-.holiday-search .bottom-row .input-group:nth-last-child(1) {
+.holiday-search .bottom-row .grouped-inputs:nth-last-child(1) {
   float: right;
   padding-right: 0;
 }
-.holiday-search .bottom-row .input-group .submit-btn {
+.holiday-search .bottom-row .grouped-inputs .submit-btn {
   font-size: 1.1em;
   font-weight: bold;
   color: #0175b9;
@@ -355,15 +372,6 @@ input {
 .holiday-search .bottom-row label {
   display: block;
   font-size: 0.9em;
-}
-.holiday-search .bottom-row .form-control {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  padding: 5px 7px;
-  font-size: 0.8em;
-  height: auto;
-  border: none;
 }
 .holiday-search .bottom-row .park {
   width: 176px;
@@ -381,17 +389,70 @@ input {
   width: 147px;
 }
 
+.newsletter-form {
+  max-width: 214px;
+  overflow: auto;
+}
+.newsletter-form input[type='email'] {
+  margin-bottom: 8px;
+  border: 1px solid #eaeaea;
+  background-color: #f7f7f7;
+  float: right;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.newsletter-form button {
+  float: right;
+}
+.newsletter-form .disclaimer {
+  float: left;
+  font-size: 0.75em;
+  padding-top: 6px;
+}
+.newsletter-form .disclaimer a {
+  color: #444444;
+  text-decoration: none;
+}
+.newsletter-form .disclaimer a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+@media (min-width: 960px) {
+  .newsletter-form {
+    padding-right: 12px;
+  }
+}
+
 .article {
   margin-bottom: 1.5%;
 }
-.article .copy {
-  padding: 12px;
+.article img {
+  display: none;
 }
-@media (max-width: 960px) {
+.article .border {
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 10px;
+}
+.article .copy {
+  padding: 0 0 12px 0;
+}
+@media (min-width: 768px) and (max-width: 960px) {
+  .article img {
+    display: block;
+  }
+  .article .border {
+    border: 1px solid #cccccc;
+    content: "";
+    clear: both;
+    display: block;
+    overflow: auto;
+  }
   .article img {
     float: left;
   }
   .article .copy {
+    padding: 12px;
     margin-left: 220px;
     min-height: 101px;
   }
@@ -402,13 +463,24 @@ input {
     margin-right: 2.18%;
     width: 23.365%;
   }
+  .article img {
+    display: block;
+  }
   .article:nth-child(4n) {
     margin-right: 0;
+  }
+  .article .border {
+    border: 1px solid #cccccc;
+    content: "";
+    clear: both;
+    display: block;
+    overflow: auto;
   }
   .article img {
     width: 100%;
   }
   .article .copy {
+    padding: 12px;
     height: 150px;
     position: relative;
   }
@@ -417,13 +489,6 @@ input {
     bottom: 12px;
     left: 12px;
   }
-}
-.article .border {
-  border: 1px solid #cccccc;
-  content: "";
-  clear: both;
-  display: block;
-  overflow: auto;
 }
 
 #menu a, #menu span {
@@ -482,7 +547,6 @@ input {
 }
 #menu .mm-listview form button {
   font-family: Rockwell;
-  color: #444444;
   padding: 8px 20px;
   color: #ffffff;
   font-size: 1.2em;

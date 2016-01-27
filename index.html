@@ -74,7 +74,7 @@
                 </div>
                 <div class="bottom-row">
                     <div class="section">
-                        <div class="input-group">
+                        <div class="grouped-inputs">
                             <label for="location">Choose a park</label>
                             <select id="park" name="park" class="form-control park">
                                 <option value="all" selected="selected">All</option>
@@ -82,11 +82,11 @@
                                 <option value="none">None</option>
                             </select>
                         </div>
-                        <div class="input-group">
+                        <div class="grouped-inputs">
                             <label for="date">When</label>
                             <input type="text" name="date" class="form-control date" id="date" value="" placeholder="Select a date" />
                         </div>
-                        <div class="input-group">
+                        <div class="grouped-inputs">
                             <label for="duration">Duration</label>
                             <select id="duration" class="form-control duration" name="duration">
                                 <option value="7 nights" selected="selected">7 nights</option>
@@ -94,7 +94,7 @@
                                 <option value="one night">1 night</option>
                             </select>
                         </div>
-                        <div class="input-group">
+                        <div class="grouped-inputs">
                             <label for="accommodation">Accommodation</label>
                             <select id="accommodation" class="form-control accommodation" name="accommodation">
                                 <option value="all" selected="selected">All</option>
@@ -102,11 +102,11 @@
                                 <option value="none">None</option>
                             </select>
                         </div>
-                        <div class="input-group">
+                        <div class="grouped-inputs">
                             <label for="location">Where are you?</label>
                             <input type="text" name="location" class="form-control location" id="location" value="" placeholder="First 4 digits of postcode" />
                         </div>
-                        <div class="input-group">
+                        <div class="grouped-inputs">
                             <button class="btn btn-default submit-btn">Search Holidays</button>
                         </div>
                     </div>
@@ -139,9 +139,14 @@
                 <div class="border">
                     <img src="images/img-article.jpg" alt="" />
                     <div class="copy">
-                        <h3>Newsletter sing-up</h3>
+                        <h3>Newsletter sign-up</h3>
                         <p>Fusce ac condimentum elit. Vivamus feugiat ullamcorper.</p>
-                        <a href="#" class="btn btn-sm btn-default cta" role="button">Learn more</a>
+                        <form id="newsletter-form" name="newsletter-form" action="#" method="post" class="cta newsletter-form">
+                            <label for="email" class="hidden">Email</label>
+                            <input type="email" class="email form-control" name="email" id="email" value="" placeholder="Enter your email address" />
+                            <button class="btn btn-sm btn-default">Sign up</button>
+                            <p class="disclaimer"><a href="#">Read out Privacy Policy</a></p>
+                        </form>
                     </div>
                 </div>
             </div>
