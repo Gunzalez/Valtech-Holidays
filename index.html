@@ -65,19 +65,19 @@
                     <div class="section">
                         <div class="input-group">
                             <label for="location">Choose a park</label>
-                            <select id="park" name="park" class="form-control">
+                            <select id="park" name="park" class="form-control park">
                                 <option value="all" selected="selected">All</option>
                                 <option value="some">Some</option>
                                 <option value="none">None</option>
                             </select>
                         </div>
                         <div class="input-group">
-                            <label for="when">When</label>
-                            <input type="text" name="when" class="form-control" id="when" value="" />
+                            <label for="date">When</label>
+                            <input type="text" name="date" class="form-control date" id="date" value="" placeholder="Select a date" />
                         </div>
                         <div class="input-group">
                             <label for="duration">Duration</label>
-                            <select id="duration" class="form-control" name="duration">
+                            <select id="duration" class="form-control duration" name="duration">
                                 <option value="7 nights" selected="selected">7 nights</option>
                                 <option value="a weekend">A weekend</option>
                                 <option value="one night">1 night</option>
@@ -85,11 +85,15 @@
                         </div>
                         <div class="input-group">
                             <label for="accommodation">Accommodation</label>
-                            <input type="text" name="accommodation" class="form-control" id="accommodation" value="" />
+                            <select id="accommodation" class="form-control accommodation" name="accommodation">
+                                <option value="all" selected="selected">All</option>
+                                <option value="some">Some</option>
+                                <option value="none">None</option>
+                            </select>
                         </div>
                         <div class="input-group">
                         <label for="location">Where are you?</label>
-                        <input type="text" name="location" class="form-control" id="location" value="" />
+                        <input type="text" name="location" class="form-control location" id="location" value="" placeholder="First 4 digits of postcode" />
                     </div>
                     </div>
                 </div>

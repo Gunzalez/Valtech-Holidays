@@ -3,6 +3,22 @@
   src: url("fonts/Rockwell/Rockwell.eot?") format("eot"), url("fonts/Rockwell/Rockwell.woff") format("woff"), url("fonts/Rockwell/Rockwell.ttf") format("truetype"), url("fonts/Rockwell/Rockwell.svg#Rockwell") format("svg");
 }
 
+::-webkit-input-placeholder {
+  color: #000000;
+}
+
+:-moz-placeholder {
+  color: #000000;
+}
+
+::-moz-placeholder {
+  color: #000000;
+}
+
+:-ms-input-placeholder {
+  color: #000000;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Rockwell;
   margin: 0;
@@ -132,7 +148,7 @@ body {
 .carousel .control {
   position: absolute;
   top: 50%;
-  margin-top: 5px;
+  margin-top: -40px;
   background: white;
   background: rgba(255, 255, 255, 0.7);
   text-align: center;
@@ -229,12 +245,28 @@ body {
   font-size: 0.9em;
 }
 .search-form .bottom-row .form-control {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  padding: 3px 6px;
-  font-size: 0.9em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 4px 7px;
+  font-size: 0.8em;
   height: auto;
+  border: none;
+}
+.search-form .bottom-row .park {
+  width: 176px;
+}
+.search-form .bottom-row .date {
+  width: 100px;
+}
+.search-form .bottom-row .duration {
+  width: 114px;
+}
+.search-form .bottom-row .accommodation {
+  width: 147px;
+}
+.search-form .bottom-row .location {
+  width: 147px;
 }
 
 .article {

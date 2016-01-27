@@ -4,6 +4,9 @@ Needed Rockwell Regular, some fonts don't look right
 Would hide carousel until all background images are loaded
 Needs images optimised for mobile devices
 Style the radio buttons
+Make carousel endless
+Make dots control carousel
+Add calendar widget
 
 
 
