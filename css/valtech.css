@@ -78,6 +78,14 @@ body {
   color: #0175b9;
 }
 
+.btn-default {
+  border: 1px solid #eaeaea;
+}
+
+input {
+  outline: none;
+}
+
 .header {
   height: 90px;
 }
@@ -115,6 +123,96 @@ body {
 }
 .main-navigation .btn.pink {
   background-color: #ee4a9a;
+}
+@media (max-width: 768px) {
+  .main-navigation {
+    display: none;
+  }
+}
+
+.aux-navigation {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.aux-navigation .site-search {
+  position: relative;
+  float: right;
+}
+.aux-navigation .site-search input {
+  background-color: #ededed;
+  font-size: 0.8em;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  height: auto;
+  width: 78px;
+  padding: 3px 40px 3px 10px;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.aux-navigation .site-search input:focus {
+  width: 150px;
+}
+.aux-navigation .site-search i {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  font-size: 1.1em;
+  color: #666666;
+}
+.aux-navigation .aux-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: right;
+  clear: right;
+}
+.aux-navigation .aux-links li {
+  float: left;
+  margin-top: 15px;
+  border-left: 1px solid #444444;
+  padding-left: 10px;
+}
+.aux-navigation .aux-links li:nth-child(1) {
+  padding: 0 10px 0 0;
+  border: none;
+}
+.aux-navigation .aux-links a {
+  text-decoration: none;
+  display: block;
+  color: #444444;
+  font-size: 0.85em;
+  line-height: 100%;
+}
+.aux-navigation .aux-links a:hover {
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .aux-navigation {
+    display: none;
+  }
+}
+
+.mobile-navigation-button {
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
+  font-size: 2.5em;
+  display: none;
+  color: #444444;
+  outline: none;
+}
+@media (max-width: 768px) {
+  .mobile-navigation-button {
+    display: block;
+  }
 }
 
 .carousel {
@@ -197,25 +295,25 @@ body {
   border: 1px solid #ffffff;
 }
 
-.search-form {
+.holiday-search {
   color: #ffffff;
 }
-.search-form .top-row {
+.holiday-search .top-row {
   font-family: Rockwell;
   background-color: #007ac2;
   padding: 10px 0;
 }
-.search-form .top-row h3 {
+.holiday-search .top-row h3 {
   float: left;
   padding-right: 20px;
 }
-.search-form .top-row .radio-group {
+.holiday-search .top-row .radio-group {
   float: left;
   font-weight: normal;
   font-size: 1.0em;
   margin-top: 5px;
 }
-.search-form .top-row label {
+.holiday-search .top-row label {
   padding: 0 25px 0 0;
   width: auto;
   float: left;
@@ -223,49 +321,61 @@ body {
   min-height: auto;
   cursor: pointer;
 }
-.search-form .top-row input[type="radio"] {
+.holiday-search .top-row input[type="radio"] {
   cursor: pointer;
   margin: 0 10px 0 0;
   float: left;
   position: static;
 }
-.search-form .bottom-row {
+.holiday-search .bottom-row {
   content: "";
   clear: both;
   display: block;
   overflow: auto;
   padding: 10px 0 15px 0;
 }
-.search-form .bottom-row .input-group {
+.holiday-search .bottom-row .input-group {
   float: left;
   padding-right: 15px;
 }
-.search-form .bottom-row label {
+.holiday-search .bottom-row .input-group:nth-last-child(1) {
+  float: right;
+  padding-right: 0;
+}
+.holiday-search .bottom-row .input-group .submit-btn {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #0175b9;
+  padding: 12px 18px;
+  border: none;
+  margin-top: 3px;
+}
+.holiday-search .bottom-row label {
   display: block;
   font-size: 0.9em;
 }
-.search-form .bottom-row .form-control {
+.holiday-search .bottom-row .form-control {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  padding: 4px 7px;
+  padding: 5px 7px;
   font-size: 0.8em;
   height: auto;
   border: none;
 }
-.search-form .bottom-row .park {
+.holiday-search .bottom-row .park {
   width: 176px;
 }
-.search-form .bottom-row .date {
+.holiday-search .bottom-row .date {
   width: 100px;
 }
-.search-form .bottom-row .duration {
+.holiday-search .bottom-row .duration {
   width: 114px;
 }
-.search-form .bottom-row .accommodation {
+.holiday-search .bottom-row .accommodation {
   width: 147px;
 }
-.search-form .bottom-row .location {
+.holiday-search .bottom-row .location {
   width: 147px;
 }
 

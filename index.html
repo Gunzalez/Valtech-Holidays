@@ -30,6 +30,17 @@
                 <li><a href="#" class="lime btn"><i class="fa fa-fw" aria-hidden="true"></i> Three</a></li>
                 <li><a href="#" class="pink btn"><i class="fa fa-fw" aria-hidden="true"></i> Four</a></li>
             </ul>
+            <div class="aux-navigation">
+                <form class="site-search" action="#" method="post" id="" name="">
+                    <label class="hidden" for="term"></label>
+                    <input type="text" id="term" class="term form-control" name="term" value="" /><i class="fa fa-fw"></i>
+                </form>
+                <ul class="aux-links">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+            <a href="#menu" class="mobile-navigation-button" aria-hidden="true"><i class="fa fa-bars"></i></a>
         </div>
     </div>
     <div class="carousel">
@@ -49,7 +60,7 @@
         </div>
     </div>
     <div class="strip blue">
-            <form id="search-form" name="search-form" class="search-form" action="#" method="post">
+            <form id="holiday-search" name="holiday-search" class="holiday-search" action="#" method="post">
                 <div class="top-row">
                     <div class="section">
                         <h3>I am looking for</h3>
@@ -92,9 +103,12 @@
                             </select>
                         </div>
                         <div class="input-group">
-                        <label for="location">Where are you?</label>
-                        <input type="text" name="location" class="form-control location" id="location" value="" placeholder="First 4 digits of postcode" />
-                    </div>
+                            <label for="location">Where are you?</label>
+                            <input type="text" name="location" class="form-control location" id="location" value="" placeholder="First 4 digits of postcode" />
+                        </div>
+                        <div class="input-group">
+                            <button class="btn btn-default submit-btn">Search Holidays</button>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -150,7 +164,7 @@
         <li><span>Search</span>
             <ul>
                 <li>
-                    <form id="mobile-search" name="mobile-search" action="#" method="post" class="mobile-search-form" autocomplete="off">
+                    <form id="mobile-search" name="mobile-search" action="#" method="post" class="mobile-holiday-search" autocomplete="off">
                         <input type="text" name="location" value="" placeholder="Location">
                         <input type="text" name="capacity" value="" placeholder="Capacity (optional)">
                         <button>Venue search</button>

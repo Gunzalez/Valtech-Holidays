@@ -7,6 +7,7 @@ Style the radio buttons
 Make carousel endless
 Make dots control carousel
 Add calendar widget
+Maybe add hover states for main navigation
 
 
 
