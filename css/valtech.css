@@ -148,7 +148,7 @@ input {
   height: auto;
   width: 78px;
   padding: 3px 40px 3px 10px;
-  border: none;
+  border: 1px solid transparent;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -158,11 +158,13 @@ input {
   transition: all 0.5s;
 }
 .aux-navigation .site-search input:focus {
-  width: 150px;
+  background-color: #ffffff;
+  border: 1px solid #ededed;
+  width: 170px;
 }
 .aux-navigation .site-search i {
   position: absolute;
-  top: 3px;
+  top: 4px;
   right: 5px;
   font-size: 1.1em;
   color: #666666;
@@ -203,7 +205,7 @@ input {
 .mobile-navigation-button {
   position: absolute;
   bottom: 12px;
-  right: 20px;
+  right: 10px;
   font-size: 2.5em;
   display: none;
   color: #444444;
@@ -422,4 +424,68 @@ input {
   clear: both;
   display: block;
   overflow: auto;
+}
+
+#menu a, #menu span {
+  font-family: Rockwell;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+#menu i {
+  width: 2.0em;
+}
+#menu .mm-navbar {
+  text-align: right;
+  padding: 0 20px;
+}
+#menu .mm-navbar a {
+  font-family: Rockwell;
+  color: #cccccc;
+}
+#menu #mm-2 .mm-title {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#menu .mm-listview a, #menu .mm-listview span {
+  padding: 15px;
+}
+#menu .mm-listview a.blue, #menu .mm-listview span.blue {
+  color: #0a80c7;
+}
+#menu .mm-listview a.green, #menu .mm-listview span.green {
+  color: #00ac51;
+}
+#menu .mm-listview a.lime, #menu .mm-listview span.lime {
+  color: #bcd631;
+}
+#menu .mm-listview a.pink, #menu .mm-listview span.pink {
+  color: #ee4a9a;
+}
+#menu .mm-listview a.aux, #menu .mm-listview span.aux {
+  padding: 15px 25px;
+}
+#menu .mm-listview form {
+  padding: 15px 20px;
+}
+#menu .mm-listview form input {
+  border: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#menu .mm-listview form input:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#menu .mm-listview form button {
+  font-family: Rockwell;
+  color: #444444;
+  padding: 8px 20px;
+  color: #ffffff;
+  font-size: 1.2em;
+  background-color: #0175b9;
+  border: none;
 }

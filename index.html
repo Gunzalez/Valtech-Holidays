@@ -31,7 +31,7 @@
                 <li><a href="#" class="pink btn"><i class="fa fa-fw" aria-hidden="true"></i> Four</a></li>
             </ul>
             <div class="aux-navigation">
-                <form class="site-search" action="#" method="post" id="" name="">
+                <form class="site-search" action="#" method="post" id="site-search" name="">
                     <label class="hidden" for="term"></label>
                     <input type="text" id="term" class="term form-control" name="term" value="" /><i class="fa fa-fw"></i>
                 </form>
@@ -159,23 +159,25 @@
     </div>
     <div class="strip grey"></div>
 </div>
-<nav id="menu">
+<nav id="menu" aria-hidden="true">
     <ul>
-        <li><span>Search</span>
+        <li><span><i class="fa fa-fw"></i> Search</span>
             <ul>
                 <li>
-                    <form id="mobile-search" name="mobile-search" action="#" method="post" class="mobile-holiday-search" autocomplete="off">
-                        <input type="text" name="location" value="" placeholder="Location">
-                        <input type="text" name="capacity" value="" placeholder="Capacity (optional)">
-                        <button>Venue search</button>
-                        <a href="#" class="advanced-search-button">Advanced Search</a>
+                    <form class="site-search" action="#" method="post" id="" name="">
+                        <label class="hidden" for="term"></label>
+                        <input type="text" id="term" class="term form-control" name="term" value="" placeholder="Search" />
+                        <button class="btn btn-info">Search</button>
                     </form>
                 </li>
             </ul>
         </li>
-        <li><a href="#">Locate</a></li>
-        <li><a href="#">Review</a></li>
-        <li><a href="#">Add</a></li>
+        <li><a href="#" class="blue"><i class="fa fa-fw"></i> One</a></li>
+        <li><a href="#" class="green"><i class="fa fa-fw"></i> Two</a></li>
+        <li><a href="#" class="lime"><i class="fa fa-fw"></i> Three</a></li>
+        <li><a href="#" class="pink"><i class="fa fa-fw"></i> Four</a></li>
+        <li><a href="#" class="aux">Login</a></li>
+        <li><a href="#" class="aux">Register</a></li>
     </ul>
 </nav>
 <script src="js/vendors/jquery-1.9.1.min.js"></script>
