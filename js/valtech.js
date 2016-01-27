@@ -66,8 +66,15 @@
         $dots: $('.dots', this.$html),
         $slidePos: 0,
 
-        updateDots: function(){
+        updateNavButtons: function(){
             $('.dot', this.$dots).eq(this.$slidePos).addClass('active').siblings().removeClass('active');
+            this.$controls.removeClass('disabled');
+            if(this.$slidePos == 0 ){
+                this.$controls.eq(0).addClass('disabled');
+            }
+            if(this.$slidePos == (this.slidesCount-1)){
+                this.$controls.eq(1).addClass('disabled');
+            }
         },
 
         slide: function(direction){
@@ -82,7 +89,7 @@
                 newLeftMargin = oldLeftMargin + $(window).width();
                 this.$slidePos--;
             }
-            this.updateDots();
+            this.updateNavButtons();
             this.$slider.css('margin-left', newLeftMargin);
         },
 
@@ -102,6 +109,8 @@
                     }
                 }
             });
+
+            this.$controls.eq(0).addClass('disabled');
             this.resize();
         },
 

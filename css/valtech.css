@@ -86,6 +86,9 @@ body {
     padding: 30px 0;
   }
 }
+.strip.grey {
+  background-color: #f7f7f7;
+}
 
 .section {
   position: relative;
@@ -278,6 +281,9 @@ body {
   line-height: 60px;
   color: #0a80c7;
 }
+.carousel .control a.disabled {
+  color: #cccccc;
+}
 .carousel .dots {
   position: absolute;
   width: 100%;
@@ -412,11 +418,11 @@ body {
 }
 .newsletter-form .disclaimer a {
   color: #444444;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .newsletter-form .disclaimer a:hover {
   color: #000000;
-  text-decoration: underline;
+  text-decoration: none;
 }
 @media (min-width: 960px) {
   .newsletter-form {
@@ -488,6 +494,55 @@ body {
     position: absolute;
     bottom: 12px;
     left: 12px;
+  }
+}
+
+@media (min-width: 960px) {
+  .video {
+    width: 604px;
+    margin-right: 20px;
+    float: left;
+  }
+}
+
+blockquote {
+  border: none;
+  background: url(../images/blockquote-open.png) top left no-repeat;
+  font-family: Rockwell;
+  padding: 12px 0 10px 30px;
+  line-height: 120%;
+  font-style: italic;
+  font-size: 1.2em;
+  margin: 0;
+}
+blockquote span {
+  display: inline-block;
+  background: url(../images/blockquote-close.png) bottom right no-repeat;
+  width: 23px;
+  height: 20px;
+  margin: 0 0 -10px 10px;
+}
+blockquote cite {
+  padding-top: 15px;
+  font-size: 0.7em;
+  font-family: "Arial", "Helvetica", "Verdana", "sans-serif";
+  font-style: normal;
+  display: block;
+  color: #000000;
+  font-weight: bold;
+}
+
+.caption {
+  padding: 12px 0;
+  line-height: 130%;
+}
+.caption .btn {
+  margin-left: 30px;
+}
+@media (min-width: 960px) {
+  .caption {
+    width: 292px;
+    float: left;
   }
 }
 
