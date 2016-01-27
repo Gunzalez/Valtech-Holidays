@@ -282,6 +282,7 @@ select {
   height: 360px;
   width: 100%;
   float: left;
+  position: relative;
 }
 .carousel #slider .slide-0 {
   background: url("../images/img-slide-0.png") top center no-repeat;
@@ -345,6 +346,68 @@ select {
 .carousel .dots ul li.active span {
   background-color: #0a80c7;
   border: 1px solid #ffffff;
+}
+.carousel .shout-out {
+  opacity: 0;
+  margin: 0 20px;
+  position: absolute;
+  left: 0;
+  top: 220px;
+  background: #ffffff;
+  padding-bottom: 15px;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+.carousel .shout-out h2 {
+  background: #0175b9;
+  color: #ffffff;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+.carousel .shout-out ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.carousel .shout-out ul li {
+  padding: 0 15px;
+  font-size: 0.9em;
+  font-family: Rockwell;
+  font-weight: bold;
+}
+.carousel .shout-out .btn {
+  position: absolute;
+  font-size: 0.85em;
+  color: #ffffff;
+  background: #0175b9;
+  bottom: 15px;
+  right: 20px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.carousel .shout-out .btn:hover {
+  background: #0a80c7;
+}
+@media (min-width: 960px) {
+  .carousel .shout-out {
+    min-width: 390px;
+    margin: 0;
+  }
+  .carousel .shout-out ul li {
+    font-size: 1.2em;
+  }
+  .carousel .shout-out h2 {
+    font-size: 1.3em;
+    letter-spacing: 3px;
+  }
+}
+.carousel .active .shout-out {
+  opacity: 1;
 }
 
 .holiday-search {

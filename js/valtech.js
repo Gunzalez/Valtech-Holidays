@@ -6,7 +6,8 @@
     valtech.properties = {
         windowWidth: '',
         isMobile: false,
-        isDesktop: false
+        isDesktop: false,
+        maxWidth: 916
     };
 
     valtech.utils = {
@@ -64,10 +65,14 @@
         $controls: $('.slide-btn', this.$html),
         slidesCount: $('.slide', this.$slider).length,
         $dots: $('.dots', this.$html),
+        $banners: $('.shout-out', this.$html),
         $slidePos: 0,
 
         updateNavButtons: function(){
+            console.log('Ends')
             $('.dot', this.$dots).eq(this.$slidePos).addClass('active').siblings().removeClass('active');
+            $('.slide', this.$slider).eq(this.$slidePos).addClass('active').siblings().removeClass('active');
+
             this.$controls.removeClass('disabled');
             if(this.$slidePos == 0 ){
                 this.$controls.eq(0).addClass('disabled');
@@ -89,7 +94,6 @@
                 newLeftMargin = oldLeftMargin + $(window).width();
                 this.$slidePos--;
             }
-            this.updateNavButtons();
             this.$slider.css('margin-left', newLeftMargin);
         },
 
@@ -110,7 +114,12 @@
                 }
             });
 
+            carousel.$slider.on("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function(event) {
+                carousel.updateNavButtons();
+            });
+
             this.$controls.eq(0).addClass('disabled');
+            $('.slide', this.$slider).eq(0).addClass('active');
             this.resize();
         },
 
@@ -129,12 +138,14 @@
             this.$slider.css('margin-left', newLeftMargin);
 
             // positioning controls
-            if ($(window).width() < 916 ){
+            if ($(window).width() < valtech.properties.maxWidth ){
                 $('.left-control').css('left', 0);
                 $('.right-control').css('right', 0);
+                this.$banners.css('left', 0);
             } else {
-                $('.left-control').css('left', ($(window).width() - 916)/2);
-                $('.right-control').css('right', ($(window).width() - 916)/2);
+                $('.left-control').css('left', ($(window).width() - valtech.properties.maxWidth)/2);
+                this.$banners.css('left', ($(window).width() - valtech.properties.maxWidth)/2);
+                $('.right-control').css('right', ($(window).width() - valtech.properties.maxWidth)/2);
             }
         }
     };
