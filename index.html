@@ -49,11 +49,53 @@
         </div>
     </div>
     <div class="strip blue">
-        <div class="section">
-
-        </div>
+            <form id="search-form" name="search-form" class="search-form" action="#" method="post">
+                <div class="top-row">
+                    <div class="section">
+                        <h3>I am looking for</h3>
+                        <div class="radio-group">
+                            <input type="radio" name="radio-button" value="x" checked id="radio-x"> <label for="radio-x">A caravan holiday</label>
+                            <input type="radio" name="radio-button" value="y" id="radio-y"> <label for="radio-y">A touring pitch for my caravan</label>
+                            <input type="radio" name="radio-button" value="z" id="radio-z"> <label for="radio-z">A camping holiday</label>
+                            <input type="radio" name="radio-button" value="k" id="radio-k"> <label for="radio-k">A caravan to buy</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-row">
+                    <div class="section">
+                        <div class="input-group">
+                            <label for="location">Choose a park</label>
+                            <select id="park" name="park" class="form-control">
+                                <option value="all" selected="selected">All</option>
+                                <option value="some">Some</option>
+                                <option value="none">None</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="when">When</label>
+                            <input type="text" name="when" class="form-control" id="when" value="" />
+                        </div>
+                        <div class="input-group">
+                            <label for="duration">Duration</label>
+                            <select id="duration" class="form-control" name="duration">
+                                <option value="7 nights" selected="selected">7 nights</option>
+                                <option value="a weekend">A weekend</option>
+                                <option value="one night">1 night</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="accommodation">Accommodation</label>
+                            <input type="text" name="accommodation" class="form-control" id="accommodation" value="" />
+                        </div>
+                        <div class="input-group">
+                        <label for="location">Where are you?</label>
+                        <input type="text" name="location" class="form-control" id="location" value="" />
+                    </div>
+                    </div>
+                </div>
+            </form>
     </div>
-    <div class="strip white">
+    <div class="strip white padded">
         <div class="section">
             <div class="article">
                 <div class="border">
@@ -97,9 +139,7 @@
             </div>
         </div>
     </div>
-    <div class="strip grey">
-
-    </div>
+    <div class="strip grey"></div>
 </div>
 <nav id="menu">
     <ul>

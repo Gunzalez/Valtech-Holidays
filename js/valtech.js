@@ -127,9 +127,6 @@
                 $('.left-control').css('left', ($(window).width() - 916)/2);
                 $('.right-control').css('right', ($(window).width() - 916)/2);
             }
-
-
-
         }
     };
 

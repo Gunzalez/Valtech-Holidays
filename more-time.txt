@@ -1,5 +1,9 @@
-Convert icons to font icons, so clearer on high resolutions screens
+Get correct fon-icons for navigation
 Add in a favicon
+Needed Rockwell Regular, some fonts don't look right
+Would hide carousel until all background images are loaded
+Needs images optimised for mobile devices
+Style the radio buttons
 
 
 
