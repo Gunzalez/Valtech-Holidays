@@ -146,7 +146,7 @@
                 "extensions": [
                     "pageshadow",
                     "theme-dark",
-
+                    "pagedim",
                     "effect-menu-slide",
                     "effect-listitems-slide"
                 ],
