@@ -24,23 +24,27 @@
 <div class="page">
     <div class="strip white">
         <div class="container header">
-            <ul class="main-navigation">
-                <li><a href="#" class="blue btn"><i class="fa fa-fw" aria-hidden="true"></i> One</a></li>
-                <li><a href="#" class="green btn"><i class="fa fa-fw" aria-hidden="true"></i> Two</a></li>
-                <li><a href="#" class="lime btn"><i class="fa fa-fw" aria-hidden="true"></i> Three</a></li>
-                <li><a href="#" class="pink btn"><i class="fa fa-fw" aria-hidden="true"></i> Four</a></li>
-            </ul>
-            <div class="aux-navigation">
-                <form class="site-search" action="#" method="post" id="site-search" name="">
-                    <label class="hidden" for="term"></label>
-                    <input type="text" id="term" class="term form-control" name="term" value="" /><i class="fa fa-fw"></i>
-                </form>
-                <ul class="aux-links">
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
-                </ul>
+            <div class="row gutter-20">
+                <div class="col-sm-12">
+                    <ul class="main-navigation">
+                        <li><a href="#" class="blue btn"><i class="fa fa-fw" aria-hidden="true"></i> One</a></li>
+                        <li><a href="#" class="green btn"><i class="fa fa-fw" aria-hidden="true"></i> Two</a></li>
+                        <li><a href="#" class="lime btn"><i class="fa fa-fw" aria-hidden="true"></i> Three</a></li>
+                        <li><a href="#" class="pink btn"><i class="fa fa-fw" aria-hidden="true"></i> Four</a></li>
+                    </ul>
+                    <div class="aux-navigation">
+                        <form class="site-search" action="#" method="post" id="site-search" name="">
+                            <label class="hidden" for="term"></label>
+                            <input type="text" id="term" class="term form-control" name="term" value="" /><i class="fa fa-fw"></i>
+                        </form>
+                        <ul class="aux-links">
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Register</a></li>
+                        </ul>
+                    </div>
+                    <a href="#menu" class="mobile-navigation-button" aria-hidden="true"><i class="fa fa-bars"></i></a>
+                </div>
             </div>
-            <a href="#menu" class="mobile-navigation-button" aria-hidden="true"><i class="fa fa-bars"></i></a>
         </div>
     </div>
     <div class="carousel">
@@ -60,58 +64,76 @@
         </div>
     </div>
     <div class="strip blue">
-            <form id="holiday-search" name="holiday-search" class="holiday-search" action="#" method="post">
-                <div class="top-row">
-                    <div class="container">
-                        <h3>I am looking for</h3>
-                        <div class="radio-group">
-                            <input type="radio" name="radio-button" value="x" checked id="radio-x"> <label for="radio-x">A caravan holiday</label>
-                            <input type="radio" name="radio-button" value="y" id="radio-y"> <label for="radio-y">A touring pitch for my caravan</label>
-                            <input type="radio" name="radio-button" value="z" id="radio-z"> <label for="radio-z">A camping holiday</label>
-                            <input type="radio" name="radio-button" value="k" id="radio-k"> <label for="radio-k">A caravan to buy</label>
+        <form id="holiday-search" name="holiday-search" class="holiday-search" action="#" method="post">
+            <div class="strip dark-blue top-row">
+                <div class="container">
+                    <div class="row gutter-20">
+                        <div class="col-sm-12">
+                            <h3>I am looking for</h3>
+                            <div class="radio-group">
+                                <div class="input-group">
+                                    <input type="radio" name="radio-button" value="x" checked id="radio-x">
+                                    <label for="radio-x">A caravan holiday</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="radio" name="radio-button" value="y" id="radio-y">
+                                    <label for="radio-y">A touring pitch for my caravan</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="radio" name="radio-button" value="z" id="radio-z">
+                                    <label for="radio-z">A camping holiday</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="radio" name="radio-button" value="k" id="radio-k">
+                                    <label for="radio-k">A caravan to buy</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="bottom-row">
-                    <div class="container">
-                        <div class="grouped-inputs">
-                            <label for="location">Choose a park</label>
-                            <select id="park" name="park" class="form-control park">
-                                <option value="all" selected="selected">All</option>
-                                <option value="some">Some</option>
-                                <option value="none">None</option>
-                            </select>
-                        </div>
-                        <div class="grouped-inputs">
-                            <label for="date">When</label>
-                            <input type="text" name="date" class="form-control date" id="date" value="" placeholder="Select a date" />
-                        </div>
-                        <div class="grouped-inputs">
-                            <label for="duration">Duration</label>
-                            <select id="duration" class="form-control duration" name="duration">
-                                <option value="7 nights" selected="selected">7 nights</option>
-                                <option value="a weekend">A weekend</option>
-                                <option value="one night">1 night</option>
-                            </select>
-                        </div>
-                        <div class="grouped-inputs">
-                            <label for="accommodation">Accommodation</label>
-                            <select id="accommodation" class="form-control accommodation" name="accommodation">
-                                <option value="all" selected="selected">All</option>
-                                <option value="some">Some</option>
-                                <option value="none">None</option>
-                            </select>
-                        </div>
-                        <div class="grouped-inputs">
-                            <label for="location">Where are you?</label>
-                            <input type="text" name="location" class="form-control location" id="location" value="" placeholder="First 4 digits of postcode" />
-                        </div>
-                        <div class="grouped-inputs">
+            </div>
+            <div class="bottom-row">
+                <div class="container">
+                    <div class="row gutter-20">
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <label for="location">Choose a park</label>
+                                <select id="park" name="park" class="form-control park">
+                                    <option value="all" selected="selected">All</option>
+                                    <option value="some">Some</option>
+                                    <option value="none">None</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="date">When</label>
+                                <input type="text" name="date" class="form-control date" id="date" value="" placeholder="Select a date" />
+                            </div>
+                            <div class="input-group">
+                                <label for="duration">Duration</label>
+                                <select id="duration" class="form-control duration" name="duration">
+                                    <option value="7 nights" selected="selected">7 nights</option>
+                                    <option value="a weekend">A weekend</option>
+                                    <option value="one night">1 night</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="accommodation">Accommodation</label>
+                                <select id="accommodation" class="form-control accommodation" name="accommodation">
+                                    <option value="all" selected="selected">All</option>
+                                    <option value="some">Some</option>
+                                    <option value="none">None</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="location">Where are you?</label>
+                                <input type="text" name="location" class="form-control location" id="location" value="" placeholder="First 4 digits of postcode" />
+                            </div>
                             <button class="btn btn-default submit-btn">Search Holidays</button>
                         </div>
                     </div>
                 </div>
-            </form>
+            </div>
+        </form>
     </div>
     <div class="strip white padded">
         <div class="container">

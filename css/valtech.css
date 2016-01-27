@@ -78,6 +78,9 @@ body {
 .strip.blue {
   background-color: #00a3e6;
 }
+.strip.dark-blue {
+  background-color: #007ac2;
+}
 .strip.padded {
   padding: 15px 0;
 }
@@ -102,8 +105,10 @@ body {
   }
 }
 
-.header {
+.header .row > [class^="col-"],
+.header .row > [class^=" col-"] {
   height: 90px;
+  position: relative;
 }
 
 .main-navigation {
@@ -111,7 +116,7 @@ body {
   padding: 0;
   list-style: none;
   position: absolute;
-  left: 0;
+  left: 10px;
   bottom: 10px;
 }
 .main-navigation li {
@@ -149,7 +154,7 @@ body {
 .aux-navigation {
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 10px;
 }
 .aux-navigation .site-search {
   position: relative;
@@ -322,12 +327,13 @@ body {
 }
 .holiday-search .top-row {
   font-family: Rockwell;
-  background-color: #007ac2;
   padding: 10px 0;
 }
 .holiday-search .top-row h3 {
-  float: left;
   padding-right: 20px;
+}
+.holiday-search .top-row .input-group {
+  padding-bottom: 3px;
 }
 .holiday-search .top-row .radio-group {
   float: left;
@@ -342,6 +348,7 @@ body {
   line-height: 110%;
   min-height: auto;
   cursor: pointer;
+  margin-top: -2px;
 }
 .holiday-search .top-row input[type="radio"] {
   cursor: pointer;
@@ -349,47 +356,86 @@ body {
   float: left;
   position: static;
 }
+@media (min-width: 480px) {
+  .holiday-search .top-row .input-group {
+    float: left;
+  }
+}
+@media (min-width: 960px) {
+  .holiday-search .top-row h3 {
+    float: left;
+  }
+}
 .holiday-search .bottom-row {
   content: "";
   clear: both;
   display: block;
   overflow: auto;
-  padding: 10px 0 15px 0;
-}
-.holiday-search .bottom-row .grouped-inputs {
-  float: left;
-  padding-right: 15px;
-}
-.holiday-search .bottom-row .grouped-inputs:nth-last-child(1) {
-  float: right;
-  padding-right: 0;
-}
-.holiday-search .bottom-row .grouped-inputs .submit-btn {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #0175b9;
-  padding: 12px 18px;
-  border: none;
-  margin-top: 3px;
+  padding: 10px 0 5px 0;
 }
 .holiday-search .bottom-row label {
   display: block;
   font-size: 0.9em;
 }
-.holiday-search .bottom-row .park {
-  width: 176px;
+.holiday-search .bottom-row .submit-btn {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #0175b9;
+  padding: 12px 18px;
+  border: none;
+  margin: 10px 0 10px 0;
 }
-.holiday-search .bottom-row .date {
-  width: 100px;
+@media (min-width: 480px) and (max-width: 960px) {
+  .holiday-search .bottom-row .submit-btn {
+    display: block;
+    clear: left;
+  }
 }
-.holiday-search .bottom-row .duration {
-  width: 114px;
+@media (min-width: 960px) {
+  .holiday-search .bottom-row .submit-btn {
+    margin-top: 3px;
+    float: right;
+  }
 }
-.holiday-search .bottom-row .accommodation {
-  width: 147px;
+.holiday-search .bottom-row .input-group {
+  padding-bottom: 10px;
+  display: block;
 }
-.holiday-search .bottom-row .location {
-  width: 147px;
+.holiday-search .bottom-row .input-group .form-control {
+  float: none;
+}
+.holiday-search .bottom-row .input-group .form-control:last-child {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+@media (min-width: 480px) {
+  .holiday-search .bottom-row .input-group {
+    float: left;
+    padding: 0 15px 10px 0;
+    display: table;
+  }
+  .holiday-search .bottom-row .input-group .form-control {
+    float: left;
+  }
+  .holiday-search .bottom-row .input-group .submit-btn {
+    clear: left;
+  }
+  .holiday-search .bottom-row .input-group .park {
+    width: 176px;
+  }
+  .holiday-search .bottom-row .input-group .date {
+    width: 100px;
+  }
+  .holiday-search .bottom-row .input-group .duration {
+    width: 114px;
+  }
+  .holiday-search .bottom-row .input-group .accommodation {
+    width: 147px;
+  }
+  .holiday-search .bottom-row .input-group .location {
+    width: 147px;
+  }
 }
 
 .newsletter-form {
@@ -431,7 +477,6 @@ body {
   margin-right: -10px;
   margin-left: -10px;
 }
-
 .gutter-20 > [class^="col-"],
 .gutter-20 > [class^=" col-"] {
   padding-right: 10px;
@@ -471,10 +516,14 @@ body {
   }
   .row .copy {
     padding: 12px;
-    height: 160px;
+    height: 150px;
     position: relative;
     border: 1px solid #eaeaea;
     margin-bottom: 30px;
+  }
+  .row .copy h3 {
+    font-size: 1.2em;
+    padding-bottom: 5px;
   }
   .row .copy .cta {
     position: absolute;
