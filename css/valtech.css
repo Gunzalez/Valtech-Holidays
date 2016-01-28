@@ -312,6 +312,11 @@ select {
 .carousel .control a.disabled {
   color: #cccccc;
 }
+@media (max-width: 480px) {
+  .carousel .control {
+    display: none;
+  }
+}
 .carousel .dots {
   position: absolute;
   width: 100%;
@@ -348,6 +353,7 @@ select {
   border: 1px solid #ffffff;
 }
 .carousel .shout-out {
+  min-width: 300px;
   opacity: 0;
   margin: 0 20px;
   position: absolute;
@@ -355,9 +361,9 @@ select {
   top: 220px;
   background: #ffffff;
   padding-bottom: 15px;
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
 }
 .carousel .shout-out h2 {
   background: #0175b9;

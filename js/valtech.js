@@ -69,7 +69,6 @@
         $slidePos: 0,
 
         updateNavButtons: function(){
-            console.log('Ends')
             $('.dot', this.$dots).eq(this.$slidePos).addClass('active').siblings().removeClass('active');
             $('.slide', this.$slider).eq(this.$slidePos).addClass('active').siblings().removeClass('active');
 
@@ -100,7 +99,7 @@
         init: function(){
             var carousel = this;
 
-            this.$controls.on('click', function(evt){
+            carousel.$controls.on('click', function(evt){
                 evt.preventDefault();
 
                 if($(this).hasClass('slide-right')){
@@ -114,13 +113,25 @@
                 }
             });
 
-            carousel.$slider.on("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function(event) {
+            carousel.$slider.on("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
                 carousel.updateNavButtons();
             });
 
-            this.$controls.eq(0).addClass('disabled');
-            $('.slide', this.$slider).eq(0).addClass('active');
-            this.resize();
+            carousel.$html.swipe({
+                swipe:function(event, direction) {
+                    if(direction == 'right'){
+                        $('.slide-left', carousel.$html).trigger('click');
+                    }
+                    if(direction == 'left'){
+                        $('.slide-right', carousel.$html).trigger('click');
+                    }
+                },
+                threshold: 0
+            });
+
+            carousel.$controls.eq(0).addClass('disabled');
+            $('.slide', carousel.$slider).eq(0).addClass('active');
+            carousel.resize();
         },
 
         resize: function(){
