@@ -741,7 +741,7 @@ blockquote cite {
 }
 
 .caption {
-  padding: 12px 0;
+  padding: 20px 20px 0 20px;
   line-height: 130%;
 }
 .caption .btn {
@@ -749,7 +749,7 @@ blockquote cite {
 }
 @media (min-width: 960px) {
   .caption {
-    padding-top: 40px;
+    padding: 40px 0 0 0;
   }
 }
 
